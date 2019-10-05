@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import {reduxForm, change} from 'redux-form'
 
 
-class Button extends Component {
+export class Button extends Component {
   constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
@@ -17,20 +15,9 @@ class Button extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>
-          кнопка
+          set Russia country
         </button>
       </div>
     )
   }
 }
-
-const mapDispatchToProps = {
-  change
-}
-
-export default reduxForm({
-  form: 'simpleForm'
-})(connect(
-  null,
-  mapDispatchToProps
-)(Button))
